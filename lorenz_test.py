@@ -299,8 +299,8 @@ def main():
     # Generate Lorenz system data
     print("\nGenerating Lorenz system data...")
     # Use slightly different parameter values to observe interesting dynamics
-    lorenz_data, spatial_data, t = generate_lorenz_data(t_span=(0, 30), n_time_points=50, n_spatial_points=1000, 
-                                         initial_state=[0.1, 0.0, 0.0],
+    lorenz_data, spatial_data, t = generate_lorenz_data(t_span=(0, 50), n_time_points=100, n_spatial_points=1000, 
+                                         initial_state=[0.0, 0.0, 0.0],
                                          sigma=10, beta=8/3, rho=28)
     
     dt = t[1] - t[0]  # Time step between snapshots
