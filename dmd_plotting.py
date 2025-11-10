@@ -226,10 +226,10 @@ class DMDPlotter:
         # # Increase spacing between rows and columns
         # fig.subplots_adjust(hspace=0.45, wspace=0.35)
 
-        plt.tight_layout()
-        
+        fig.tight_layout()
+
         if save_path:
-            plt.savefig(save_path, dpi=450, bbox_inches='tight')
+            fig.savefig(save_path, dpi=450, bbox_inches='tight')
             
         return fig
     
@@ -370,9 +370,9 @@ class DMDPlotter:
         
         # Increase spacing between subplots
         fig.subplots_adjust(top=0.92, bottom=0.08, hspace=0.4, wspace=0.3)
-        
+
         if save_path:
-            plt.savefig(save_path, dpi=300, bbox_inches='tight')
+            fig.savefig(save_path, dpi=300, bbox_inches='tight')
             
         return fig
     
@@ -435,12 +435,12 @@ class DMDPlotter:
         ax.set_zlabel('Imaginary Part')
         ax.set_title(f'Eigenfunction {eigenfunction_idx} Evolution')
         ax.legend(fontsize=9)  # Added fontsize
-        
+
         # Add better spacing
-        plt.tight_layout(pad=1.0)
-        
+        fig.tight_layout(pad=1.0)
+
         if save_path:
-            plt.savefig(save_path)
+            fig.savefig(save_path)
             
         return fig
     
@@ -566,9 +566,9 @@ class DMDPlotter:
         
         # Increase spacing between subplots
         fig.subplots_adjust(hspace=0.3, wspace=0.3)
-        
+
         if save_path:
-            plt.savefig(save_path, dpi=300, bbox_inches='tight')
+            fig.savefig(save_path, dpi=300, bbox_inches='tight')
             
         return fig
 
@@ -615,12 +615,12 @@ class DMDPlotter:
         plt.axhline(y=avg_error, color='r', linestyle='--', 
                    label=f'Average Error: {avg_error:.4f}')
         plt.legend(fontsize=10)  # Added fontsize
-        
+
         # Add more padding
-        plt.tight_layout(pad=1.0)
-        
+        fig.tight_layout(pad=1.0)
+
         if save_path:
-            plt.savefig(save_path)
+            fig.savefig(save_path)
             
         return fig
     
@@ -690,11 +690,11 @@ class DMDPlotter:
             ax.tick_params(axis='both', which='major', labelsize=8)
         
         # Add spacing between subplots
-        plt.tight_layout()
+        fig.tight_layout()
         fig.subplots_adjust(hspace=0.35, wspace=0.25)
-        
+
         if save_path:
-            plt.savefig(save_path)
+            fig.savefig(save_path)
             
         return fig
     
@@ -746,10 +746,10 @@ class DMDPlotter:
         
         # DO NOT use tight_layout() or plt.tight_layout(pad=1.0)
         # Instead, use a normal figure adjustment:
-        plt.subplots_adjust(left=0.1, right=0.9, top=0.9, bottom=0.1)
-        
+        fig.subplots_adjust(left=0.1, right=0.9, top=0.9, bottom=0.1)
+
         if save_path:
-            plt.savefig(save_path, dpi=300, bbox_inches='tight')
+            fig.savefig(save_path, dpi=300, bbox_inches='tight')
                 
         return fig
     
@@ -798,12 +798,12 @@ class DMDPlotter:
         plt.title('DMD Mode Growth Rates')
         plt.grid(True)
         plt.colorbar(label='Amplitude')
-        
+
         # Add more spacing
-        plt.tight_layout(pad=1.0)
-        
+        fig.tight_layout(pad=1.0)
+
         if save_path:
-            plt.savefig(save_path)
+            fig.savefig(save_path)
             
         return fig
     
@@ -941,12 +941,12 @@ class DMDPlotter:
         
         ax_explain.text(0, 1, explanation, fontsize=9,  # Reduced from 12
                       verticalalignment='top', bbox=dict(boxstyle='round', facecolor='#f0f0f0', alpha=0.5))
-        
+
         # Add more space between subplots
-        plt.tight_layout()
-        
+        fig.tight_layout()
+
         if save_path:
-            plt.savefig(save_path, dpi=300, bbox_inches='tight')
+            fig.savefig(save_path, dpi=300, bbox_inches='tight')
             
         return fig
     
@@ -984,11 +984,11 @@ class DMDPlotter:
         plt.grid(True)
         plt.axhline(y=0, color='k', linestyle='--', alpha=0.5)
         plt.axvline(x=0, color='k', linestyle='--', alpha=0.5)
-        
-        plt.tight_layout()
-        
+
+        fig.tight_layout()
+
         if save_path:
-            plt.savefig(save_path)
+            fig.savefig(save_path)
             
         return fig
     
@@ -1104,12 +1104,12 @@ class DMDPlotter:
         
         ax4.text(0, 1, explanation, fontsize=9,  # Reduced from 11
                 verticalalignment='top', bbox=dict(boxstyle='round', facecolor='#f0f0f0', alpha=0.5))
-        
+
         # Use tight_layout() instead of subplots_adjust at the end
-        plt.tight_layout()
-        
+        fig.tight_layout()
+
         if save_path:
-            plt.savefig(save_path, dpi=300, bbox_inches='tight')
+            fig.savefig(save_path, dpi=300, bbox_inches='tight')
             
         return fig
     
@@ -1228,9 +1228,9 @@ class DMDPlotter:
         
         # Increase spacing between subplots
         fig.subplots_adjust(hspace=0.35, wspace=0.30)
-        
+
         if save_path:
-            plt.savefig(save_path, dpi=300, bbox_inches='tight')
+            fig.savefig(save_path, dpi=300, bbox_inches='tight')
             
         return fig
     
@@ -1368,11 +1368,11 @@ class DMDPlotter:
         
         ax_explain.text(0, 1, explanation, fontsize=10,  # Reduced from 12
                       verticalalignment='top', bbox=dict(boxstyle='round', facecolor='#f0f0f0', alpha=0.5))
-        
-        plt.tight_layout()
-    
+
+        fig.tight_layout()
+
         if save_path:
-            plt.savefig(save_path, dpi=300, bbox_inches='tight')
+            fig.savefig(save_path, dpi=300, bbox_inches='tight')
             
         return fig
     
@@ -1486,12 +1486,12 @@ class DMDPlotter:
         
         ax_exp.text(0.5, 0.5, explanation, fontsize=10, ha='center', va='center',  # Reduced from 12
                   bbox=dict(boxstyle='round', facecolor='#f0f0f0', alpha=0.5))
-        
+
         # Adjust spacing
-        plt.tight_layout()
-        
+        fig.tight_layout()
+
         if save_path:
-            plt.savefig(save_path, dpi=300, bbox_inches='tight')
+            fig.savefig(save_path, dpi=300, bbox_inches='tight')
             
         return fig
 
@@ -1653,11 +1653,11 @@ class DMDPlotter:
             Residual plot shows reconstruction errors over time to identify systematic biases or patterns.
         """
         fig.suptitle(explanation, fontsize=14, y=0.99)
-        
-        plt.tight_layout()
+
+        fig.tight_layout()
         fig.subplots_adjust(top=0.85, hspace=0.3)
-        
+
         if save_path:
-            plt.savefig(save_path, dpi=300, bbox_inches='tight')
+            fig.savefig(save_path, dpi=300, bbox_inches='tight')
             
         return fig
